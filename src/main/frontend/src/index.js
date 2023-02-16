@@ -25,7 +25,8 @@ import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages for this kit
-import Index from "views/Index.js";
+import WeddingExample from "pages/example/weddingExample";
+// import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
@@ -37,7 +38,7 @@ ReactDOM.render(
         <BrowserRouter>
             <Switch>
                 <Switch>
-                    <Route path="/index" render={(props) => <Index {...props} />}/>
+                    <Route path="/WeddingExample" render={(props) => <WeddingExample {...props} />}/>
                     <Route
                         path="/nucleo-icons"
                         render={(props) => <NucleoIcons {...props} />}
@@ -54,8 +55,8 @@ ReactDOM.render(
                         path="/login-page"
                         render={(props) => <LoginPage {...props} />}
                     />
-                    <Redirect to="/index"/>
-                    <Redirect from="/" to="/index"/>
+                    <Redirect to="/WeddingExample"/>
+                    <Redirect from="/" to="/WeddingExample"/>
                 </Switch>
             </Switch>
         </BrowserRouter>
