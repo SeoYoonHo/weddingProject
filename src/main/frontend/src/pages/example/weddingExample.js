@@ -47,10 +47,11 @@ function WeddingExample() {
                     {/*<BasicElements />*/}
                     {/*<Navbars />*/}
                     <InvitaionStroy/>
-                    <Tabs/>
+                    <Contact/>
+                    {/*<Tabs/>*/}
                     {/*<Pagination />*/}
                     {/*<Notifications />*/}
-                    {/*<Typography />*/}
+                    <Typography />
                     {/*<Javascript />*/}
                     {/*<Carousel />*/}
                     {/*<NucleoIcons />*/}

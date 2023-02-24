@@ -15,11 +15,11 @@ import {
 function InvitaionStroy() {
     const [iconPills, setIconPills] = React.useState("1");
     return (
-        <div>
+        <div className="section">
             <Container>
                 <Row>
                     <Col className="ml-auto mr-auto" md="10" xl="6">
-                        <h3 className="text-center category">Story</h3>
+                        <h3 className="text-center category">Wedding Story</h3>
                         <Nav className="justify-content-center" role="tablist" tabs>
                             <NavItem>
                                 <NavLink
