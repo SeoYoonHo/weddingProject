@@ -13,6 +13,16 @@
   width: 100%;
 }
 
+.typography-line-flex {
+  /*margin-bottom: 35px;*/
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100px;
+  width: 100%;
+}tms
+
 .pick-class-label {
   border-radius: 8px;
   border: 1px solid #E3E3E3;

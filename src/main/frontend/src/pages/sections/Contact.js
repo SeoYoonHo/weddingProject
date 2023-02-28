@@ -15,6 +15,9 @@ import {
     Col,
 } from "reactstrap";
 
+import {faPhone, faCommentSms} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+
 // core components
 
 function Contact() {
@@ -26,14 +29,15 @@ function Contact() {
                 <Container className="text-center">
                     <Row>
                         <Col className="ml-auto mr-auto">
-                            <div className="typography-line">
+                            <div className="typography-line-flex">
                                 <h5> 신랑에게 연락하기 </h5>
+                                <FontAwesomeIcon icon={faPhone} size="2x"/>
+                                <FontAwesomeIcon icon={faCommentSms} size="2x"/>
                             </div>
                             <div className="typography-line">
                                 <h5> 신부에게 연락하기 </h5>
                             </div>
                         </Col>
-
                     </Row>
                     <Row>
                         <Col className="ml-auto mr-auto">
