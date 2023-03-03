@@ -27,7 +27,29 @@ import Examples from "../index-sections/Examples.js";
 import Download from "../index-sections/Download.js";
 import ContactTemplate from "../sections/Contact.js";
 
+import {
+    Animator,
+    ScrollContainer,
+    ScrollPage,
+    batch,
+    Fade,
+    FadeIn,
+    FadeOut,
+    Move,
+    MoveIn,
+    MoveOut,
+    Sticky,
+    StickyIn,
+    StickyOut,
+    Zoom,
+    ZoomIn,
+    ZoomOut
+} from "react-scroll-motion";
+
 function WeddingExample() {
+    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
+    const FadeUp = batch(FadeIn(), MoveIn(0,500));
+
     React.useEffect(() => {
         document.body.classList.add("index-page");
         document.body.classList.add("sidebar-collapse");
@@ -40,28 +62,48 @@ function WeddingExample() {
         };
     });
     return (
-        <>
-            <div className="wrapper">
-                <IndexHeader/>
-                <div className="main">
-                    {/*<BasicElements />*/}
-                    {/*<Navbars />*/}
-                    <InvitaionStroy/>
-                    <Contact/>
-                    {/*<Tabs/>*/}
-                    {/*<Pagination />*/}
-                    {/*<Notifications />*/}
-                    <Typography />
-                    {/*<Javascript />*/}
-                    {/*<Carousel />*/}
-                    {/*<NucleoIcons />*/}
-                    <CompleteExamples/>
-                    {/*<SignUp />*/}
-                    {/*<Examples />*/}
-                    {/*<Download />*/}
-                </div>
-            </div>
-        </>
+        <ScrollContainer>
+            {/*<div className="wrapper">*/}
+            <ScrollPage>
+                <Animator style={{width: "100%"}} animation={FadeUp}>
+                    <IndexHeader/>
+                </Animator>
+            </ScrollPage>
+
+            {/*<ScrollPage>*/}
+            {/*    <Animator animation={FadeUp}>*/}
+            {/*        <span style={{fontSize: "40px"}}>I'm FadeUp ⛅️</span>*/}
+            {/*    </Animator>*/}
+            {/*</ScrollPage>*/}
+
+
+            {/*<div className="main">*/}
+                {/*<BasicElements />*/}
+                {/*<Navbars />*/}
+                <ScrollPage>
+                    <Animator style={{width: "100%"}} animation={FadeUp}>
+                        <InvitaionStroy/>
+                    </Animator>
+                </ScrollPage>
+                <ScrollPage>
+                    <Animator style={{width: "100%"}} animation={FadeUp}>
+                        <Contact/>
+                    </Animator>
+                </ScrollPage>
+                {/*<Tabs/>*/}
+                {/*<Pagination />*/}
+                {/*<Notifications />*/}
+                <Typography/>
+                {/*<Javascript />*/}
+                {/*<Carousel />*/}
+                {/*<NucleoIcons />*/}
+                <CompleteExamples/>
+                {/*<SignUp />*/}
+                {/*<Examples />*/}
+                {/*<Download />*/}
+            {/*</div>*/}
+            {/*</div>*/}
+        </ScrollContainer>
     );
 }
 
