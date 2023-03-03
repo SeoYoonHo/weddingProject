@@ -18,7 +18,7 @@ function InvitaionStroy() {
         <div className="section">
             <Container>
                 <Row>
-                    <Col className="ml-auto mr-auto" md="10" xl="6">
+                    <Col className="ml-auto mr-auto">
                         <h3 className="text-center category">Wedding Story</h3>
                         <Nav className="justify-content-center" role="tablist" tabs>
                             <NavItem>

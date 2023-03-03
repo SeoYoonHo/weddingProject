@@ -21,22 +21,20 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // core components
 
 function Contact() {
-    const [iconPills, setIconPills] = React.useState("1");
-    const [pills, setPills] = React.useState("1");
     return (
         <div className="section section-tabs">
             <Container className="text-center container-flex">
                 <Row className="row-flex">
                     <Col className="ml-auto mr-auto">
                         <div className="typography-line-flex-row">
-                            <h3 className="contact-icon-style" style={{flex: 2}}>신랑에게 연락하기</h3>
+                            <h4 className="contact-icon-style" style={{flex: 2}}>신랑에게 연락하기</h4>
                             <div className="contact-icon-style">
                                 <FontAwesomeIcon icon={faPhone} size="2x"/>
                                 <FontAwesomeIcon icon={faCommentSms} size="2x"/>
                             </div>
                         </div>
                         <div className="typography-line-flex-row">
-                            <h3 className="contact-icon-style" style={{flex: 2}}>신부에게 연락하기</h3>
+                            <h4 className="contact-icon-style" style={{flex: 2}}>신부에게 연락하기</h4>
                             <div className="contact-icon-style">
                                 <FontAwesomeIcon icon={faPhone} size="2x"/>
                                 <FontAwesomeIcon icon={faCommentSms} size="2x"/>

@@ -47,8 +47,7 @@ import {
 } from "react-scroll-motion";
 
 function WeddingExample() {
-    const ZoomInScrollOut = batch(StickyIn(), FadeIn(), ZoomIn());
-    const FadeUp = batch(FadeIn(), MoveIn(0,500));
+    const FadeUp = batch(FadeIn());
 
     React.useEffect(() => {
         document.body.classList.add("index-page");
@@ -62,49 +61,63 @@ function WeddingExample() {
         };
     });
     return (
-        <ScrollContainer>
-            {/*<div className="wrapper">*/}
-            <ScrollPage>
-                <Animator style={{width: "100%"}} animation={FadeUp}>
-                    <IndexHeader/>
-                </Animator>
-            </ScrollPage>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            backgroundColor:'gray'
+        }}>
+            <ScrollContainer style={{
+                width: 500,
+                alignSelf: 'center',
+                backgroundColor:'white',
+                zIndex:1
+            }}>
 
-            {/*<ScrollPage>*/}
-            {/*    <Animator animation={FadeUp}>*/}
-            {/*        <span style={{fontSize: "40px"}}>I'm FadeUp ⛅️</span>*/}
-            {/*    </Animator>*/}
-            {/*</ScrollPage>*/}
+                <ScrollPage>
+                    <Animator animation={FadeUp}>
+                        <IndexHeader/>
+                    </Animator>
+                </ScrollPage>
+
+                {/*<ScrollPage>*/}
+                {/*    <Animator animation={FadeUp}>*/}
+                {/*        <span style={{fontSize: "40px"}}>I'm FadeUp ⛅️</span>*/}
+                {/*    </Animator>*/}
+                {/*</ScrollPage>*/}
 
 
-            {/*<div className="main">*/}
+                {/*<div className="main">*/}
                 {/*<BasicElements />*/}
                 {/*<Navbars />*/}
                 <ScrollPage>
-                    <Animator style={{width: "100%"}} animation={FadeUp}>
+                    <Animator animation={FadeUp}>
                         <InvitaionStroy/>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage>
-                    <Animator style={{width: "100%"}} animation={FadeUp}>
+                    <Animator animation={FadeUp}>
                         <Contact/>
                     </Animator>
                 </ScrollPage>
                 {/*<Tabs/>*/}
                 {/*<Pagination />*/}
                 {/*<Notifications />*/}
-                <Typography/>
+                {/*<Typography/>*/}
                 {/*<Javascript />*/}
-                {/*<Carousel />*/}
+                <ScrollPage>
+                    <Animator animation={FadeUp}>
+                        <Carousel/>
+                    </Animator>
+                </ScrollPage>
                 {/*<NucleoIcons />*/}
-                <CompleteExamples/>
+                {/*<CompleteExamples/>*/}
                 {/*<SignUp />*/}
                 {/*<Examples />*/}
                 {/*<Download />*/}
-            {/*</div>*/}
-            {/*</div>*/}
-        </ScrollContainer>
-    );
+                {/*</div>*/}
+            </ScrollContainer>
+        </div>);
 }
 
 export default WeddingExample;
